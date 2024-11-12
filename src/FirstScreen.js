@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
-import * as AppConstants from '../constants/AppConstants';
+import * as AppConstants from '../src/constants/AppConstants';
 
 export default function FirstScreen(props) {
   return (
@@ -8,7 +8,7 @@ export default function FirstScreen(props) {
       <View style={styles.semicircle}>
       </View>
       <Image
-        source={require('../assets/Shop1.png')}
+        source={require('../src/assets/Shop1.png')}
         style={{
           height: AppConstants.pixelNormalize(343),
           width: AppConstants.pixelNormalize(305),
@@ -75,6 +75,6 @@ const styles = StyleSheet.create({
   backgroundColor: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#FFFFFF',
   }
 });
