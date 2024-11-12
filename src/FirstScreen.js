@@ -1,9 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, StatusBar, SafeAreaView} from 'react-native';
 import * as AppConstants from '../src/constants/AppConstants';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 export default function FirstScreen(props) {
+    let isDarkMode;
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+        flex:1
+    };
   return (
+      <SafeAreaView style={backgroundStyle}>
+          <StatusBar
+              barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+              backgroundColor={backgroundStyle.backgroundColor}
+          />
     <View style={styles.backgroundColor}>
       <View style={styles.semicircle}>
       </View>
@@ -26,7 +37,7 @@ export default function FirstScreen(props) {
           </Text>
       </View>
       <TouchableOpacity onPress={() => {
-        props.navigation.navigate('Second');
+        props.navigation.navigate('SecondScreen');
       }}>
         <View style={styles.rectangle}>
           <Text style={{
@@ -39,7 +50,7 @@ export default function FirstScreen(props) {
       </TouchableOpacity>
       <View>
         <TouchableOpacity onPress={() => {
-          props.navigation.navigate('Second');
+          props.navigation.navigate('SecondScreen');
         }}>
           <Text style={{
             marginTop: AppConstants.pixelNormalize(24),
@@ -50,6 +61,7 @@ export default function FirstScreen(props) {
         </TouchableOpacity>
       </View>
     </View>
+      </SafeAreaView>
   );
 }
 
