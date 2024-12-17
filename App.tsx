@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import CustomNavigationContainer from "./src/CustomNavigationContainer";
+import CustomNavigationContainer from './src/CustomNavigationContainer';
 function App(): React.JSX.Element {
 
   return (

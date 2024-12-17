@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
-import * as AppConstants from '../constants/AppConstants';
-import { AntDesign } from '@expo/vector-icons';
-import Dash from 'react-native-dash';
+import * as AppConstants from '../src/constants/AppConstants';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+// import { AntDesign } from '@expo/vector-icons';
+import Dash from 'react-native-dash-2';
 
 export default function SixthScreen(props) {
     return (
@@ -11,7 +12,7 @@ export default function SixthScreen(props) {
                 <View style={styles.MainContainer}>
                     <View style={styles.Curve} >
                         <TouchableOpacity onPress={() => {
-                            props.navigation.navigate('Fifth');
+                            props.navigation.navigate('FifthScreen');
                         }}>
                         <AntDesign
                         name="arrowleft"
@@ -26,7 +27,7 @@ export default function SixthScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/Mask3.png')}
+                        source={require('../src/assets/Mask3.png')}
                         style={{
                             width: AppConstants.pixelNormalize(25),
                             height: AppConstants.pixelNormalize(25),
@@ -47,7 +48,7 @@ export default function SixthScreen(props) {
             <View>
                 <View style={styles.box1}>
                     <Image
-                        source={require('../assets/orangefruit.png')}
+                        source={require('../src/assets/orangefruit.png')}
                         style={{
                             width: AppConstants.pixelNormalize(50),
                             height: AppConstants.pixelNormalize(41),
@@ -66,7 +67,7 @@ export default function SixthScreen(props) {
                         }}>Fresh Orange</Text>
                     <View style={styles.circle}>
                         <Image
-                            source={require('../assets/trash.png')}
+                            source={require('../src/assets/trash.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(9),
                                 height: AppConstants.pixelNormalize(11),
@@ -118,7 +119,7 @@ export default function SixthScreen(props) {
             <View>
                 <View style={styles.box2}>
                     <Image
-                        source={require('../assets/pomegranate4.png')}
+                        source={require('../src/assets/pomegranate4.png')}
                         style={{
                             width: AppConstants.pixelNormalize(50),
                             height: AppConstants.pixelNormalize(41),
@@ -137,7 +138,7 @@ export default function SixthScreen(props) {
                         }}>Fresh Pomegranate Fruit</Text>
                     <View style={styles.circle}>
                         <Image
-                            source={require('../assets/trash.png')}
+                            source={require('../src/assets/trash.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(9),
                                 height: AppConstants.pixelNormalize(11),
@@ -203,7 +204,7 @@ export default function SixthScreen(props) {
             </View>
             <View style={styles.rectangle}>
                 <View style={styles.boxcircle}>
-                    <Image source={require('../assets/house.png')}
+                    <Image source={require('../src/assets/house.png')}
                         style={{
                             width: AppConstants.pixelNormalize(16),
                             height: AppConstants.pixelNormalize(16),
@@ -218,7 +219,7 @@ export default function SixthScreen(props) {
                         marginLeft: AppConstants.pixelNormalize(30),
                     }} />
                 <View style={styles.boxcircle2}>
-                    <Image source={require('../assets/house1.png')}
+                    <Image source={require('../src/assets/house1.png')}
                         style={{
                             width: AppConstants.pixelNormalize(16),
                             height: AppConstants.pixelNormalize(16),
@@ -363,7 +364,7 @@ export default function SixthScreen(props) {
                     }}>$45.00</Text>
                 </View>
                 <TouchableOpacity onPress={() => {
-                    props.navigation.navigate('Seventh');
+                    props.navigation.navigate('SeventhScreen');
                 }}>
                     <View style={styles.Continue}>
                         <Text style={{

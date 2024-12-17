@@ -1,8 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, Button, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
-import * as AppConstants from '../constants/AppConstants';
-import { Ionicons, AntDesign } from '@expo/vector-icons';
-import Dash from 'react-native-dash';
+import * as AppConstants from '../src/constants/AppConstants';
+// import { Ionicons, AntDesign } from '@expo/vector-icons';
+import Dash from 'react-native-dash-2';
+// import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 export default function ThirdScreen(props) {
     return (
@@ -10,10 +13,13 @@ export default function ThirdScreen(props) {
             <View>
                 <View style={styles.MainContainer}>
                 <TouchableOpacity onPress={() => {
-                        props.navigation.navigate('Second');
+                        props.navigation.navigate('SecondScreen');
                     }}>
                         <View style={styles.Curve}>
-                            <AntDesign name="appstore1" size={16} color="#B5B6B9"
+                            <AntDesign
+                                name="arrowleft"
+                                size={18}
+                                color="black"
                             style={{
                                 marginTop: AppConstants.pixelNormalize(1),
                                 marginLeft: AppConstants.pixelNormalize(2),
@@ -23,7 +29,7 @@ export default function ThirdScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/Mask3.png')}
+                        source={require('../src/assets/Mask3.png')}
                         style={{
                             width: AppConstants.pixelNormalize(25),
                             height: AppConstants.pixelNormalize(25),
@@ -34,7 +40,7 @@ export default function ThirdScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/basket.png')}
+                        source={require('../src/assets/basket.png')}
                         style={{
                             width: AppConstants.pixelNormalize(28),
                             height: AppConstants.pixelNormalize(28),
@@ -45,7 +51,7 @@ export default function ThirdScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/searching.png')}
+                        source={require('../src/assets/searching.png')}
                         style={{
                             width: AppConstants.pixelNormalize(25),
                             height: AppConstants.pixelNormalize(25),
@@ -58,7 +64,7 @@ export default function ThirdScreen(props) {
             <ScrollView>
             <View style={styles.map}>
                 <ImageBackground
-                    source={require('../assets/map.png')}
+                    source={require('../src/assets/map.png')}
                     style={{
                         width: AppConstants.pixelNormalize(336),
                         height: AppConstants.pixelNormalize(275),
@@ -68,7 +74,7 @@ export default function ThirdScreen(props) {
                         borderBottomRightRadius: AppConstants.pixelNormalize(15),
                     }}>
                     <Image
-                        source={require('../assets/house.png')}
+                        source={require('../src/assets/house.png')}
                         style={{
                             width: AppConstants.pixelNormalize(21),
                             height: AppConstants.pixelNormalize(18),
@@ -77,7 +83,7 @@ export default function ThirdScreen(props) {
                         }}>
                     </Image>
                     <Image
-                        source={require('../assets/house.png')}
+                        source={require('../src/assets/house.png')}
                         style={{
                             width: AppConstants.pixelNormalize(21),
                             height: AppConstants.pixelNormalize(18),
@@ -85,7 +91,7 @@ export default function ThirdScreen(props) {
                         }}>
                     </Image>
                     <Image
-                        source={require('../assets/house.png')}
+                        source={require('../src/assets/house.png')}
                         style={{
                             width: AppConstants.pixelNormalize(21),
                             height: AppConstants.pixelNormalize(18),
@@ -95,7 +101,7 @@ export default function ThirdScreen(props) {
                     </Image>
                     <View style={styles.house}>
                         <Image
-                            source={require('../assets/house.png')}
+                            source={require('../src/assets/house.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(21),
                                 height: AppConstants.pixelNormalize(18),
@@ -104,7 +110,7 @@ export default function ThirdScreen(props) {
                             }}>
                         </Image>
                         <Image
-                            source={require('../assets/house.png')}
+                            source={require('../src/assets/house.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(21),
                                 height: AppConstants.pixelNormalize(18),
@@ -136,7 +142,7 @@ export default function ThirdScreen(props) {
                             marginLeft: AppConstants.pixelNormalize(18),
                         }} />
                     <Image
-                        source={require('../assets/coffeeShop.png')}
+                        source={require('../src/assets/coffeeShop.png')}
                         style={{
                             marginTop: AppConstants.pixelNormalize(1),
                             marginLeft: AppConstants.pixelNormalize(5.5),
@@ -197,7 +203,7 @@ export default function ThirdScreen(props) {
                     <View style={styles.marketCombine}>
                         <View>
                             <Image
-                                source={require('../assets/lady.png')}
+                                source={require('../src/assets/lady.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(185),
                                     height: AppConstants.pixelNormalize(119),
@@ -208,7 +214,7 @@ export default function ThirdScreen(props) {
                         </View>
                         <View>
                             <Image
-                                source={require('../assets/market.png')}
+                                source={require('../src/assets/market.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(185),
                                     height: AppConstants.pixelNormalize(119),
@@ -236,18 +242,18 @@ export default function ThirdScreen(props) {
                     </View>
                     <View style={styles.Stars}>
                         <View style={styles.star}>
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star-half.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star-half.png')} />
                         </View>
                         <View style={styles.star2}>
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star.png')} />
-                            <Image source={require('../assets/star-half.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star.png')} />
+                            <Image source={require('../src/assets/star-half.png')} />
                         </View>
                     </View>
                     <View style={styles.lastContainer}>
@@ -260,7 +266,7 @@ export default function ThirdScreen(props) {
                                 color: '#000000'
                             }}>2 Km</Text>
                             <TouchableOpacity onPress={() => {
-                                props.navigation.navigate('Fourth');
+                                props.navigation.navigate('FourthScreen');
                             }}>
                                 <View style={styles.ShopNow}>
                                     <Text style={{
@@ -281,7 +287,7 @@ export default function ThirdScreen(props) {
                                 color: '#000000'
                             }}>1.7 Km</Text>
                             <TouchableOpacity onPress={() => {
-                                props.navigation.navigate('Fourth');
+                                props.navigation.navigate('FourthScreen');
                             }}>
                                 <View style={styles.ShopNow2}>
                                     <Text style={{
@@ -342,7 +348,7 @@ const styles = StyleSheet.create({
         marginLeft: AppConstants.pixelNormalize(45),
         backgroundColor: '#ffffff',
         shadowColor: '#00000014',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowRadius: 5,
         shadowOpacity: 0.26,
         elevation: 10,
@@ -355,7 +361,7 @@ const styles = StyleSheet.create({
         marginLeft: AppConstants.pixelNormalize(11),
         backgroundColor: 'white',
         shadowColor: '#00000014',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowRadius: 5,
         shadowOpacity: 0.16,
         elevation: 5,
@@ -434,6 +440,6 @@ const styles = StyleSheet.create({
     backgroundColor: {
         width: '100%',
         height: '100%',
-        backgroundColor: '#FFFFFF'
-    }
+        backgroundColor: '#FFFFFF',
+    },
 });

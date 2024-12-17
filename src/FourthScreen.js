@@ -1,8 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Text, Button, Image, ScrollView, TouchableOpacity } from 'react-native';
-import * as AppConstants from '../constants/AppConstants';
-import { AntDesign, Entypo, FontAwesome5 } from '@expo/vector-icons';
-import Dash from 'react-native-dash';
+import * as AppConstants from '../src/constants/AppConstants';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Entypo from 'react-native-vector-icons/Entypo';
+// import { AntDesign, Entypo, FontAwesome5 } from '@expo/vector-icons';
+import Dash from 'react-native-dash-2';
 
 export default function FourthScreen(props) {
     return (
@@ -10,10 +13,12 @@ export default function FourthScreen(props) {
             <View>
                 <View style={styles.MainContainer}>
                     <TouchableOpacity onPress={() => {
-                        props.navigation.navigate('Third');
+                        props.navigation.navigate('ThirdScreen');
                     }}>
                         <View style={styles.Curve} >
-                            <AntDesign name="appstore1" size={16} color="#B5B6B9"
+                            <AntDesign name="arrowleft"
+                                       size={18}
+                                       color="black"
                                  style={{
                                  marginTop: AppConstants.pixelNormalize(1),
                                  marginLeft: AppConstants.pixelNormalize(2),
@@ -23,7 +28,7 @@ export default function FourthScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/Mask3.png')}
+                        source={require('../src/assets/Mask3.png')}
                         style={{
                             width: AppConstants.pixelNormalize(25),
                             height: AppConstants.pixelNormalize(25),
@@ -34,7 +39,7 @@ export default function FourthScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/basket.png')}
+                        source={require('../src/assets/basket.png')}
                         style={{
                             width: AppConstants.pixelNormalize(28),
                             height: AppConstants.pixelNormalize(28),
@@ -45,7 +50,7 @@ export default function FourthScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/searching.png')}
+                        source={require('../src/assets/searching.png')}
                         style={{
                             width: AppConstants.pixelNormalize(25),
                             height: AppConstants.pixelNormalize(25),
@@ -90,7 +95,7 @@ export default function FourthScreen(props) {
                     </View>
                     <View style={styles.smallContiner2}>
                         <Image
-                            source={require('../assets/Fruits.png')}
+                            source={require('../src/assets/Fruits.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(205),
                                 height: AppConstants.pixelNormalize(148),
@@ -168,7 +173,7 @@ export default function FourthScreen(props) {
                     </View>
                     <View style={styles.row}>
                         <View style={styles.smallCircle1}>
-                            <Image source={require('../assets/Mango.png')}
+                            <Image source={require('../src/assets/Mango.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(17),
                                     height: AppConstants.pixelNormalize(21),
@@ -177,7 +182,7 @@ export default function FourthScreen(props) {
                                 }} ></Image>
                         </View>
                         <View style={styles.smallCircle2}>
-                            <Image source={require('../assets/apple.png')}
+                            <Image source={require('../src/assets/apple.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(21),
                                     height: AppConstants.pixelNormalize(20),
@@ -186,7 +191,7 @@ export default function FourthScreen(props) {
                                 }} ></Image>
                         </View>
                         <View style={styles.smallCircle3}>
-                            <Image source={require('../assets/orange.png')}
+                            <Image source={require('../src/assets/orange.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(25),
                                     height: AppConstants.pixelNormalize(25),
@@ -195,7 +200,7 @@ export default function FourthScreen(props) {
                                 }} ></Image>
                         </View>
                         <View style={styles.smallCircle4}>
-                            <Image source={require('../assets/pomegranate4.png')}
+                            <Image source={require('../src/assets/pomegranate4.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(21),
                                     height: AppConstants.pixelNormalize(20),
@@ -231,7 +236,7 @@ export default function FourthScreen(props) {
                                  color: '#CBB73F',
                                  }}>1 Kg</Text>
                         </View>
-                        <Image source={require('../assets/orangefruit.png')}
+                        <Image source={require('../src/assets/orangefruit.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(86),
                                 height: AppConstants.pixelNormalize(73),
@@ -252,7 +257,7 @@ export default function FourthScreen(props) {
                                 color: '#000000'
                             }}>1kg - $14</Text>
                             <TouchableOpacity onPress={() => {
-                                props.navigation.navigate('Fifth');
+                                props.navigation.navigate('FifthScreen');
                             }}>
                                 <View style={styles.Add1}>
                                     <Text style={{
@@ -264,7 +269,7 @@ export default function FourthScreen(props) {
                         </View>
                     </View>
                     <View style={styles.fruitCont2}>
-                        <Image source={require('../assets/pomegranate4.png')}
+                        <Image source={require('../src/assets/pomegranate4.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(94),
                                 height: AppConstants.pixelNormalize(77),
@@ -285,7 +290,7 @@ export default function FourthScreen(props) {
                                 color: '#000000'
                             }}>1kg - $18</Text>
                             <TouchableOpacity onPress={() => {
-                                props.navigation.navigate('Fifth');
+                                props.navigation.navigate('FifthScreen');
                             }}>
                                 <View style={styles.Add1}>
                                     <Text style={{
@@ -299,7 +304,7 @@ export default function FourthScreen(props) {
                 </View>
                 <View style={styles.FruitContainers2}>
                     <View style={styles.fruitCont3}>
-                        <Image source={require('../assets/Grape.png')}
+                        <Image source={require('../src/assets/Grape.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(84),
                                 height: AppConstants.pixelNormalize(79),
@@ -320,7 +325,7 @@ export default function FourthScreen(props) {
                                 color: '#000000'
                             }}>1kg - $22</Text>
                             <TouchableOpacity onPress={() => {
-                                props.navigation.navigate('Fifth');
+                                props.navigation.navigate('FifthScreen');
                             }}>
                                 <View style={styles.Add1}>
                                     <Text style={{
@@ -332,7 +337,7 @@ export default function FourthScreen(props) {
                         </View>
                     </View>
                     <View style={styles.fruitCont4}>
-                        <Image source={require('../assets/strawberry3.png')}
+                        <Image source={require('../src/assets/strawberry3.png')}
                             style={{
                                 width: AppConstants.pixelNormalize(102),
                                 height: AppConstants.pixelNormalize(102),
@@ -353,7 +358,7 @@ export default function FourthScreen(props) {
                                 color: '#000000'
                             }}>1kg - $35</Text>
                             <TouchableOpacity onPress={() => {
-                                props.navigation.navigate('Fifth');
+                                props.navigation.navigate('FifthScreen');
                             }}>
                                 <View style={styles.Add1}>
                                     <Text style={{
@@ -372,7 +377,7 @@ export default function FourthScreen(props) {
             <View style={styles.Lastcontainer}>
                 <View style={styles.BasicContainer}>
                     <TouchableOpacity onPress={() => {
-                        props.navigation.navigate('Third');
+                        props.navigation.navigate('ThirdScreen');
                     }}>
                         <View style={styles.homeContainer1}>
                             <Entypo name="home" size={16} color="#FFFFFF"
@@ -392,7 +397,7 @@ export default function FourthScreen(props) {
                     </TouchableOpacity>
                     <View>
                         <TouchableOpacity>
-                            <Image source={require('../assets/Pay2.png')}
+                            <Image source={require('../src/assets/Pay2.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(24),
                                     height: AppConstants.pixelNormalize(21),
@@ -403,7 +408,7 @@ export default function FourthScreen(props) {
                     </View>
                     <View>
                         <TouchableOpacity>
-                            <Image source={require('../assets/Shop4.png')}
+                            <Image source={require('../src/assets/Shop4.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(20),
                                     height: AppConstants.pixelNormalize(20),
@@ -414,7 +419,7 @@ export default function FourthScreen(props) {
                     </View>
                     <View>
                         <TouchableOpacity>
-                            <Image source={require('../assets/percent.png')}
+                            <Image source={require('../src/assets/percent.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(20),
                                     height: AppConstants.pixelNormalize(21),
@@ -425,7 +430,7 @@ export default function FourthScreen(props) {
                     </View>
                     <View>
                         <TouchableOpacity>
-                            <Image source={require('../assets/Setting.png')}
+                            <Image source={require('../src/assets/Setting.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(21),
                                     height: AppConstants.pixelNormalize(21),

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity, CheckBox, ScrollView } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
-import * as AppConstants from '../constants/AppConstants';
+// import { AntDesign } from '@expo/vector-icons';
+import * as AppConstants from '../src/constants/AppConstants';
 import RoundCheckbox from 'react-native-round-checkbox';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 export default function SeventhScreen(props) {
       const [isTick4, setIsTick4] = useState(false);
@@ -13,7 +14,7 @@ export default function SeventhScreen(props) {
             <View style={styles.MainContainer}>
                 <View style={styles.Curve} >
                     <TouchableOpacity onPress={() => {
-                        props.navigation.navigate('Sixth');
+                        props.navigation.navigate('SixthScreen');
                     }}>
                         <AntDesign
                         name="arrowleft"
@@ -36,7 +37,7 @@ export default function SeventhScreen(props) {
                 </View>
                 <View>
                     <Image
-                        source={require('../assets/Mask3.png')}
+                        source={require('../src/assets/Mask3.png')}
                         style={{
                             width: AppConstants.pixelNormalize(25),
                             height: AppConstants.pixelNormalize(25),
@@ -52,7 +53,7 @@ export default function SeventhScreen(props) {
                     <View style={styles.combine}>
                         <View style={styles.box1}>
                             <Image
-                                source={require('../assets/orangefruit.png')}
+                                source={require('../src/assets/orangefruit.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(50),
                                     height: AppConstants.pixelNormalize(41),
@@ -181,7 +182,7 @@ export default function SeventhScreen(props) {
                 <View style={styles.container5}>
                     <View style={styles.combine}>
                         <View style={styles.coupon}>
-                            <Image source={require('../assets/percent.png')}
+                            <Image source={require('../src/assets/percent.png')}
                                 style={{
                                     width: AppConstants.pixelNormalize(25),
                                     height: AppConstants.pixelNormalize(25),
@@ -208,7 +209,7 @@ export default function SeventhScreen(props) {
                 <View style={styles.combinelast}>
                     <View>
                         <TouchableOpacity onPress={() => {
-                            props.navigation.navigate('Sixth');
+                            props.navigation.navigate('SixthScreen');
                         }}>
                             <View style={styles.Cancel}>
                                 <Text style={{

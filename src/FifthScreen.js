@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text, ScrollView, TouchableOpacity } from 'react-native';
-import * as AppConstants from '../constants/AppConstants';
-import { AntDesign } from '@expo/vector-icons';
+import * as AppConstants from '../src/constants/AppConstants';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+// import { AntDesign } from '@expo/vector-icons';
 
 export default function FifthScreen(props) {
     return (
@@ -9,7 +10,7 @@ export default function FifthScreen(props) {
             <View>
                 <View style={styles.MainContainer}>
                     <TouchableOpacity onPress={() => {
-                        props.navigation.navigate('Fourth');
+                        props.navigation.navigate('FourthScreen');
                     }}>
                         <View style={styles.Curve}>
                     <AntDesign
@@ -26,7 +27,7 @@ export default function FifthScreen(props) {
 
                 <View>
                     <Image
-                        source={require('../assets/Mask3.png')}
+                        source={require('../src/assets/Mask3.png')}
                         style={{
                             width: AppConstants.pixelNormalize(28),
                             height: AppConstants.pixelNormalize(28),
@@ -40,7 +41,7 @@ export default function FifthScreen(props) {
             <ScrollView>
             <View style={styles.rectangle}>
                 <Image
-                    source={require('../assets/orangefruit.png')}
+                    source={require('../src/assets/orangefruit.png')}
                     style={{
                         width: AppConstants.pixelNormalize(228),
                         height: AppConstants.pixelNormalize(193),
@@ -62,31 +63,31 @@ export default function FifthScreen(props) {
                     }}>$14.00 - 1kg</Text>
                 </View>
                 <View style={styles.star}>
-                    <Image source={require('../assets/star.png')}
+                    <Image source={require('../src/assets/star.png')}
                         style={{
                             width: AppConstants.pixelNormalize(15),
                             height: AppConstants.pixelNormalize(15),
                             marginLeft: AppConstants.pixelNormalize(4),
                         }} />
-                    <Image source={require('../assets/star.png')}
+                    <Image source={require('../src/assets/star.png')}
                         style={{
                             width: AppConstants.pixelNormalize(15),
                             height: AppConstants.pixelNormalize(15),
                             marginLeft: AppConstants.pixelNormalize(4),
                         }} />
-                    <Image source={require('../assets/star.png')}
+                    <Image source={require('../src/assets/star.png')}
                         style={{
                             width: AppConstants.pixelNormalize(15),
                             height: AppConstants.pixelNormalize(15),
                             marginLeft: AppConstants.pixelNormalize(4),
                         }} />
-                    <Image source={require('../assets/star.png')}
+                    <Image source={require('../src/assets/star.png')}
                         style={{
                             width: AppConstants.pixelNormalize(15),
                             height: AppConstants.pixelNormalize(15),
                             marginLeft: AppConstants.pixelNormalize(4),
                         }} />
-                    <Image source={require('../assets/star-half.png')}
+                    <Image source={require('../src/assets/star-half.png')}
                         style={{
                             width: AppConstants.pixelNormalize(15),
                             height: AppConstants.pixelNormalize(15),
@@ -96,7 +97,7 @@ export default function FifthScreen(props) {
             </View>
             <View style={styles.semicontainer}>
                 <View style={styles.circle}>
-                    <Image source={require('../assets/cart2.png')}
+                    <Image source={require('../src/assets/cart2.png')}
                         style={{
                             width: AppConstants.pixelNormalize(35),
                             height: AppConstants.pixelNormalize(30),
@@ -151,7 +152,7 @@ export default function FifthScreen(props) {
                 <View style={styles.row}>
                 <TouchableOpacity>
                     <View style={styles.smallCircle1}>
-                        <Image source={require('../assets/grapes.png')}
+                        <Image source={require('../src/assets/grapes.png')}
                             style={{
                                 marginTop: AppConstants.pixelNormalize(9),
                                 marginLeft: AppConstants.pixelNormalize(10),
@@ -160,7 +161,7 @@ export default function FifthScreen(props) {
                     </TouchableOpacity>
                     <TouchableOpacity>
                     <View style={styles.smallCircle2}>
-                        <Image source={require('../assets/strawberry1.png')}
+                        <Image source={require('../src/assets/strawberry1.png')}
                             style={{
                                 marginTop: AppConstants.pixelNormalize(6),
                                 marginLeft: AppConstants.pixelNormalize(6),
@@ -169,7 +170,7 @@ export default function FifthScreen(props) {
                     </TouchableOpacity>
                     <TouchableOpacity>
                     <View style={styles.smallCircle3}>
-                        <Image source={require('../assets/pomegranate.png')}
+                        <Image source={require('../src/assets/pomegranate.png')}
                             style={{
                                 marginTop: AppConstants.pixelNormalize(9),
                                 marginLeft: AppConstants.pixelNormalize(6),
@@ -177,7 +178,7 @@ export default function FifthScreen(props) {
                     </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => {
-                        props.navigation.navigate('Sixth');
+                        props.navigation.navigate('SixthScreen');
                     }}>
                         <View style={styles.Checkout}>
                             <Text style={{

@@ -1,12 +1,10 @@
 import React from 'react';
 import {StyleSheet, Text, View, TextInput, Image, TouchableOpacity, StatusBar, SafeAreaView} from 'react-native';
 import * as AppConstants from './constants/AppConstants';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-
-// import { AntDesign, MaterialIcons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default function SecondScreen(props) {
     let isDarkMode;
@@ -42,10 +40,10 @@ export default function SecondScreen(props) {
                 </View>
             </View>
             <View style={styles.rectangle}>
-                {/*<LinearGradient*/}
-                {/*    // Background Linear Gradient*/}
-                {/*    colors={['#FFFFFF', '#FFFFFF00']}*/}
-                {/*    style={styles.background}/>*/}
+                <LinearGradient
+                    // Background Linear Gradient
+                    colors={['#FFFFFF', '#FFFFFF00']}
+                    style={styles.background}></LinearGradient>
                 <Text style={styles.Login}>Login to Continue</Text>
                 <Text style={styles.info}>Please enter information below</Text>
                 <View style={styles.userName}>
@@ -72,7 +70,7 @@ export default function SecondScreen(props) {
                     </View>
                 </View>
                 <TouchableOpacity onPress={() => {
-                    props.navigation.navigate('Third');
+                    props.navigation.navigate('ThirdScreen');
                 }}>
                     <View style={styles.LoginNow}>
                         <Text style={{ color: '#FFF' }}>Login Now</Text>
